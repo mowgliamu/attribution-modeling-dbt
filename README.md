@@ -1,7 +1,7 @@
 # Marketing Attribution Modeling
 This project aims to solve the attribution problem for Miro according to the given custom attribution rules. The SQL in this project is compatible with BigQuery.
 
-In order to run this project, followt these steps (dbt must be installed):
+In order to run this project, follow these steps (dbt must be installed):
 1. Clone this repo.
 2. Create a profile named `miro_assignment`, or update the `profile:` key in the
 `dbt_project.yml` file to point to an existing profile ([docs](https://docs.getdbt.com/docs/configure-your-profile)). Make sure the `project` and `dataset` are set correctly in your `profile.yml` for BigQuery.
