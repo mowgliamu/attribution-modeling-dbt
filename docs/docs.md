@@ -1,3 +1,5 @@
+This document is best viewed here: https://paper.dropbox.com/doc/Attribution-Documentation--Bl6b8UUno6DOCrwFqfL5LnbTAg-PdqPN2RVvtEhhSBYfoIkL
+
 # Attribution Documentation
 The goal of this project is to assign a marketing channel to each acquired customer. Two tables have been provided - `sessions` and `conversions`. The `conversions` table contains all the users along with their signup times, while the `sessions` tables provides information about all the interactive sessions for each user including the medium that led to a particular session.
 
@@ -19,9 +21,6 @@ With these two things implemented in `session_transformed.sql`, we have all the 
 
 
 ## Attribution Assignment Algorithm
-
-
-https://miro.com/app/embed/uXjVOjkbo7U=/
 
 
 [https://miro.com/app/board/uXjVOjkbo7U=/](https://miro.com/app/board/uXjVOjkbo7U=/)
