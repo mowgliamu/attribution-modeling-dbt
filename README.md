@@ -9,5 +9,5 @@ In order to run this project, follow these steps (dbt must be installed):
 4. Run `dbt run` .
 5. Run `dbt test`.
 
-The documentation about the algorithm can be found [here](https://github.com/mowgliamu/attribution-modeling/blob/main/docs). If you would like to generate automated documentation from dbt, run `dbt docs generate`.
+The documentation about the algorithm can be found in the [docs](https://github.com/mowgliamu/attribution-modeling/blob/main/docs) direcotry and also [here](https://paper.dropbox.com/doc/Miro-Attribution-Documentation--Bl6b8UUno6DOCrwFqfL5LnbTAg-PdqPN2RVvtEhhSBYfoIkL) If you would like to generate automated documentation from dbt, run `dbt docs generate`.
 
