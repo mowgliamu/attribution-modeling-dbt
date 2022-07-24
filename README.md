@@ -1,15 +1,13 @@
-# Attribution playbook
-This dbt project is a worked example to demonstrate how to model customer
-attribution. The SQL in this project is compatible with BigQuery.
+# Marketing Attribution Modeling
+This project aims to solve the attribution problem for Miro according to the given custom attribution rules. The SQL in this project is compatible with BigQuery.
 
-If you want to run this project yourself to play with it (assuming you have
-dbt installed):
+In order to run this project, followt these steps (dbt must be installed):
 1. Clone this repo.
-2. Create a profile named `playbook`, or update the `profile:` key in the
-`dbt_project.yml` file to point to an existing profile ([docs](https://docs.getdbt.com/docs/configure-your-profile)).
-3. Run `dbt deps`.
-4. Run `dbt seed`.
-5. Run `dbt run` -- if you are using a warehouse other than Snowflake, you may
-find that you have to update some SQL to be compatible with your warehouse.
-6. Run `dbt test`.
+2. Create a profile named `miro_assignment`, or update the `profile:` key in the
+`dbt_project.yml` file to point to an existing profile ([docs](https://docs.getdbt.com/docs/configure-your-profile)). Make sure the `project` and `dataset` are set correctly in your `profile.yml` for BigQuery.
+3. Run `dbt seed`.
+4. Run `dbt run` .
+5. Run `dbt test`.
+
+If you would like to generate automated documentation from dbt, run `dbt docs generate`.
 
