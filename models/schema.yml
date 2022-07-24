@@ -1,0 +1,140 @@
+version: 2
+
+models:
+  - name: sessions_transformed
+    description: >
+      Redefining some names of the mediums and aggregating many channels into one.
+
+    columns:
+      - name: user_id
+        tests:
+          - not_null
+
+      - name: time_started
+        tests:
+          - not_null
+
+      - name: signup_time
+        tests:
+          - not_null
+
+      - name: is_paid
+        tests:
+          - accepted_values:
+                values: [true, false]
+                quote: false
+
+      - name: medium
+        description: New names for the referrer
+        tests:
+          - not_null
+          - accepted_values:
+                values: ['PAID CLICK', 'PAID IMP', 'ORGANIC CLICK', 'DIRECT', 'OTHER']
+
+
+  - name: attribution_1_3_hours
+    description: >
+      Attributing paid click to users who had one or more paid click referrals between 1 and 3 hour before signup.
+
+    columns:
+      - name: user_id
+        tests:
+          - unique
+          - not_null
+
+      - name: signup_time
+        tests:
+          - not_null
+
+      - name: attribution
+        description: By design we should only have paid clicks here!
+        tests:
+          - not_null
+          - accepted_values:
+                values: ['PAID CLICK']
+
+
+  - name: attribution_0_1_hours
+    description: >
+      Attribution based on activity between the sign up time and 1 hour before that.
+
+    columns:
+      - name: user_id
+        tests:
+          - unique
+          - not_null
+
+      - name: signup_time
+        tests:
+          - not_null
+
+      - name: attribution
+        description: We can only have paid clicks or paid impressions in this segment!
+        tests:
+          - not_null
+          - accepted_values:
+                values: ['PAID CLICK', 'PAID IMP']
+
+
+  - name: attribution_0_12_hours
+    description: >
+      Attribution based on activity between the sign up time and 12 hour before that.
+
+    columns:
+      - name: user_id
+        tests:
+          - unique
+          - not_null
+
+      - name: signup_time
+        tests:
+          - not_null
+
+      - name: attribution
+        description: By design we should only have organic clicks here!
+        tests:
+          - not_null
+          - accepted_values:
+                values: ['ORGANIC CLICK']
+
+
+  - name: attribution_12_hours_before
+    description: >
+      Attribution based on activity between the sign up time and everything beyond 12 hours after signup.
+
+    columns:
+      - name: user_id
+        tests:
+          - unique
+          - not_null
+
+      - name: signup_time
+        tests:
+          - not_null
+
+      - name: attribution
+        tests:
+          - not_null
+          - accepted_values:
+                values: ['DIRECT', 'OTHER']
+
+
+  - name: attribution_all
+    description: >
+      Attribution based on activity between the sign up time and everything beyond 12 hours after signup.
+
+    columns:
+      - name: user_id
+        tests:
+          - unique
+          - not_null
+
+      - name: signup_time
+        tests:
+          - not_null
+
+      - name: attribution
+        tests:
+          - not_null
+          - accepted_values:
+                values: ['DIRECT', 'OTHER', 'PAID CLICK', 'PAID IMP', 'ORGANIC CLICK']
