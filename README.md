@@ -9,5 +9,5 @@ In order to run this project, follow these steps (dbt must be installed):
 4. Run `dbt run` .
 5. Run `dbt test`.
 
-The documentation about the algorithm can be found in `docs`. If you would like to generate automated documentation from dbt, run `dbt docs generate`.
+The documentation about the algorithm can be found in `docs` (https://github.com/mowgliamu/attribution-modeling/blob/main/docs/docs.md). If you would like to generate automated documentation from dbt, run `dbt docs generate`.
 
