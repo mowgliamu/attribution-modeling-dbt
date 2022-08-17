@@ -1,5 +1,5 @@
 # Marketing Attribution Modeling
-This project aims to solve the attribution problem for Miro according to the given custom attribution rules. The SQL in this project is compatible with BigQuery.
+This project aims to solve the attribution problem for a SaaS company according to the given custom attribution rules. The SQL in this project is compatible with BigQuery.
 
 In order to run this project, follow these steps (dbt must be installed):
 1. Clone this repo.
